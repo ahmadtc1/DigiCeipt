@@ -13,7 +13,7 @@
 </div>
 <div class = 'upload button'>
   <a class = 'route-link' [routerLink] = "['/upload']">
-    <button mat-raised-button color="primary">
+    <button (click) = 'onUploadClick()' mat-raised-button color="primary">
       Get Started
     </button>
   </a>
