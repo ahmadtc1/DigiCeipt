@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -9,10 +8,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title: string = 'DigiCeipt';
 
-  constructor(private router: Router) {
-  }
-
-  onUploadClick(): void {
-    this.router.navigate(['/upload']);
+  constructor() {
   }
 }
