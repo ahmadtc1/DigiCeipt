@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from '../material/material.module';
-import { SaveFormComponent } from './save-form/save-form.component';
+import { SaveFormComponent } from './receipt/save-form/save-form.component';
 import { RouterModule } from '@angular/router';
-import { ReceiptViewComponent } from './receipt-view/receipt-view.component';
+import { ReceiptViewComponent } from './receipt/receipt-view/receipt-view.component';
 
 @NgModule({
   declarations: [
