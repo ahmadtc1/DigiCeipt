@@ -5,17 +5,25 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '../material/material.module';
 import { SaveFormComponent } from './receipt/save-form/save-form.component';
 import { ReceiptViewComponent } from './receipt/receipt-view/receipt-view.component';
-
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
     SaveFormComponent,
-    ReceiptViewComponent
+    ReceiptViewComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
     SharedModule,
     MaterialModule,
+    RouterModule.forRoot([
+      { path: 'welcome', component: WelcomeComponent },
+      { path: 'upload', component: ReceiptViewComponent },
+      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+      { path: "**", redirectTo: 'welcome', pathMatch: 'full' }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
