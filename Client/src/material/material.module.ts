@@ -8,7 +8,6 @@ import {
   MatIconModule,
 } from '@angular/material';
 @NgModule({
-  declarations: [],
   imports: [
     MatButtonModule,
     MatCardModule,
@@ -24,4 +23,5 @@ import {
     MatIconModule
   ]
 })
+
 export class MaterialModule { }
