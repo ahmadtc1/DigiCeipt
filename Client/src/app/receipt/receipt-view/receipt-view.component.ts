@@ -15,11 +15,7 @@ export class ReceiptViewComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   openDialog() {
-    const dialogRef = this.dialog.open(SaveFormComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+    this.dialog.open(SaveFormComponent);
   }
 
   ngOnInit() {
