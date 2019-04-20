@@ -1,19 +1,31 @@
 <div style="text-align: center">
   <mat-card>
     <h1>
-      <i class="material-icons md-48">
-        table_chart
-      </i>
-      Your Receipts
+      <mat-card-title>
+        <i class="material-icons md-48">
+          table_chart
+        </i>
+        Your Receipts
+      </mat-card-title>
     </h1>
-  </mat-card>
-  <mat-card>
-    <button class="Upload" mat-raised-button color="primary" 
-    (click)="openDialog()">
+
+    <button class="Upload" mat-raised-button color="primary" (click)="openDialog()">
       Upload
     </button>
   </mat-card>
-  <mat-card class="receiptCard" *ngIf="receipts">
-
+  <mat-card class="receiptCard">
+    <div class="row">
+      <div class="col-md-2">
+        Filter By:
+      </div>
+      <div class="col-md-4">
+        <input type = "text"/>
+      </div>
+    </div>
+    <a class = "route-link" [routerLink] = "['/welcome']">
+      <button mat-raised-button color="accent">
+        Back
+      </button>
+    </a>
   </mat-card>
 </div>
