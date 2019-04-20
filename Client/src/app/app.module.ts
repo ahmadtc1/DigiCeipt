@@ -20,7 +20,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MaterialModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
-      { path: 'upload', component: ReceiptViewComponent },
+      { path: 'receipts', component: ReceiptViewComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: "**", redirectTo: 'welcome', pathMatch: 'full' }
     ])
