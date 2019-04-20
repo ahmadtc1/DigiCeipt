@@ -7,9 +7,26 @@ import { Receipt } from '../receipt'
 export class ReceiptViewComponent implements OnInit {
   receipts: Receipt[];
   filteredReceipts: Receipt[] = [];
+  _listFilter: string;
+
+
+
+  constructor() { }
+
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  /*
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredReceipts = this.listFilter ? this.performFilter(this.listFilter): this.receipts;
+  }
 
   
-  constructor() { }
+  performFilter(filter: string): Receipt[] {    
+  }
+  */
 
   ngOnInit() {
   }
