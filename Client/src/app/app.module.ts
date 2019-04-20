@@ -7,6 +7,7 @@ import { SaveFormComponent } from './receipt/save-form/save-form.component';
 import { ReceiptViewComponent } from './receipt/receipt-view/receipt-view.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     BrowserModule,
     SharedModule,
     MaterialModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: 'receipts', component: ReceiptViewComponent },

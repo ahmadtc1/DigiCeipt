@@ -1,21 +1,25 @@
 <div style="text-align:center">
-    <mat-card>
+  <mat-card>
+    <mat-card-title>
       <h1>
         Welcome to {{ title }}!
       </h1>
-    </mat-card>
-    <mat-card>
+    </mat-card-title>
+    <mat-card-subtitle>
       <p>
         Store all of your receipts digitally, have them available for access at your fingertips!
+        <i class="material-icons">
+          pan_tool
+        </i>
       </p>
-    </mat-card>
-  </div>
-  <div class = 'upload button'>
-    <a class = 'route-link' [routerLink] = "['/receipts']">
-      <button class = "getStarted"
-      mat-raised-button 
-      color="primary">
-        Get Started
-      </button>
-    </a>
-  </div>
+    </mat-card-subtitle>
+
+  </mat-card>
+</div>
+<div class='upload button'>
+  <a class='route-link' [routerLink]="['/receipts']">
+    <button class="getStarted" mat-raised-button color="primary">
+      Get Started
+    </button>
+  </a>
+</div>

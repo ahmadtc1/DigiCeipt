@@ -7,4 +7,13 @@
       Your Receipts
     </h1>
   </mat-card>
+  <mat-card>
+    <button class="Upload" mat-raised-button color="primary" 
+    (click)="openDialog()">
+      Upload
+    </button>
+  </mat-card>
+  <mat-card class="receiptCard" *ngIf="receipts">
+
+  </mat-card>
 </div>
