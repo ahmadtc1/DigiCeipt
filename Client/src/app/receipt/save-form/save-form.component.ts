@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import {  ReceiptSave } from '../receiptSaveFormat'
+import {  ReceiptSave } from '../receiptSaveFormat';
 @Component({
   selector: 'app-save-form',
   templateUrl: './save-form.component.html',
@@ -22,7 +22,7 @@ export class SaveFormComponent implements OnInit{
   }
 
   constructor(public dialogRef: MatDialogRef<SaveFormComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { 
+    @Inject(MAT_DIALOG_DATA) public data: ReceiptSave) { 
     this.name = "";
     this.content = "";
   }

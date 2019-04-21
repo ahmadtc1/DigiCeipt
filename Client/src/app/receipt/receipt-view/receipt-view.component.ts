@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Receipt } from '../receipt'
 import { MatDialog } from '@angular/material';
 import { SaveFormComponent } from '../save-form/save-form.component';
-
+import { ReceiptSave } from '../receiptSaveFormat';
 @Component({
   templateUrl: './receipt-view.component.html',
   styleUrls: ['./receipt-view.component.css']
 })
 export class ReceiptViewComponent implements OnInit {
+  receiptName: string;
+  receiptContent: any;
   receipts: Receipt[];
   filteredReceipts: Receipt[] = [];
   _listFilter: string;
@@ -15,7 +17,7 @@ export class ReceiptViewComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   openDialog() {
-    this.dialog.open(SaveFormComponent);
+    const dialogRef = this.dialog.open(SaveFormComponent);
   }
 
   ngOnInit() {

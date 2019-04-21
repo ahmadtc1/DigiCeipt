@@ -2,20 +2,20 @@
 <mat-dialog-content>
   <form class="save-receipt-form">
     <mat-form-field class="example-full-width">
-      <input [(ngModel)]="name" matInput placeholder="Receipt Name" id="receiptName">
+      <input [(ngModel)]="data.name" matInput placeholder="Receipt Name" id="receiptName">
     </mat-form-field>
     <br>
     <mat-form-field class="example-full-width">
-      <input type="file" accept="image/png, image/jpeg" id="content"/>
+      <input type="file" accept="image/png, image/jpeg" id="content" />
     </mat-form-field>
   </form>
-  <h1>{{this.name}}</h1>
+  <h3>{{data.date}}</h3>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-raised-button mat-dialog-close>
     Cancel
   </button>
-  <button *ngIf = "isNameEmpty && isContentEmpty" mat-raised-button mat-dialog-close>
-      Upload
-      </button>
-      </mat-dialog-actions>
+  <button *ngIf="isNameEmpty && isContentEmpty" mat-raised-button mat-dialog-close>
+    Upload
+  </button>
+</mat-dialog-actions>
