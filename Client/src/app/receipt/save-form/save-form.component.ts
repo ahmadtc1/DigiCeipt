@@ -1,9 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
 @Component({
   selector: 'app-save-form',
   templateUrl: './save-form.component.html',
@@ -16,6 +13,17 @@ export class SaveFormComponent {
   isContentEmpty: boolean = true;
   isVisible: boolean = false;
 
-  constructor() { }
+  getName(): string {
+    return this.name;
+  }
+
+  setName(value: string): void {
+    this.name = value;
+  }
+
+  constructor() { 
+    this.name = "";
+    this.content = "";
+  }
 
 }
