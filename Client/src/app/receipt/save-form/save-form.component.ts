@@ -7,10 +7,8 @@ import {  ReceiptSave } from '../receiptSaveFormat';
   styleUrls: ['./save-form.component.css']
 })
 export class SaveFormComponent implements OnInit{
+  name: string;
   content: string;
-  isNameEmpty: boolean = true;
-  isContentEmpty: boolean = true;
-  isVisible: boolean = false;
   isEnabled: boolean = false;
 
   constructor(public dialogRef: MatDialogRef<SaveFormComponent>,
@@ -22,6 +20,12 @@ export class SaveFormComponent implements OnInit{
   }
 
   ngOnInit(): void {
+  }
 
+  saveIsEnabled(): void {
+    let isNamePopulated = false;
+    if (this.name !== null) {
+      this.isEnabled = true;
+    }
   }
 }

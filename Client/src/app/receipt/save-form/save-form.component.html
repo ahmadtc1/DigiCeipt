@@ -2,7 +2,7 @@
 <mat-dialog-content>
   <form class="save-receipt-form">
     <mat-form-field class="example-full-width">
-      <input [(ngModel)]="data.name" matInput placeholder="Receipt Name" id="receiptName">
+      <input [(ngModel)]="data.name" matInput placeholder="Receipt Name" id="receiptName" (keyup) = "saveIsEnabled()">
       <mat-error>Required</mat-error>
     </mat-form-field>
     <br>
