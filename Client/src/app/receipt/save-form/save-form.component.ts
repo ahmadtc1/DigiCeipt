@@ -12,8 +12,8 @@ export interface DialogData {
 export class SaveFormComponent {
   name: string;
   content: string;
-  nameIsEmpty: boolean = true;
-  contentIsEmpty: boolean = true;
+  isNameEmpty: boolean = true;
+  isContentEmpty: boolean = true;
   isVisible: boolean = false;
 
   constructor() { }

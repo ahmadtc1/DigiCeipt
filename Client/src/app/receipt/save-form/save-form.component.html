@@ -2,19 +2,20 @@
 <mat-dialog-content>
   <form class="save-receipt-form">
     <mat-form-field class = "example-full-width">
-      <input matInput placeholder="Receipt Name">
+      <input matInput placeholder="Receipt Name" [(ngModel)] = "name">
     </mat-form-field>
 
     <mat-form-field class = "example-full-width">
-      <input matInput placeholder="Receipt Name" type="text"/>
+      <input matInput placeholder="Receipt Name" type="text" [(ngModel)] = "content"/>
     </mat-form-field>
   </form>
+  <h1>{{name}}</h1>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-raised-button mat-dialog-close>
     Cancel
   </button>
-  <button mat-raised-button mat-dialog-close>
+  <button *ngIf = "!isNameEmpty && !isContentEmpty" mat-raised-button mat-dialog-close>
     Upload
   </button>
 </mat-dialog-actions>

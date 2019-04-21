@@ -9,20 +9,20 @@
       </mat-card-title>
     </h1>
 
-    <button class="Upload" mat-raised-button color="primary" (click)="openDialog()">
-      Upload
-    </button>
   </mat-card>
   <mat-card class="receiptCard">
     <div class="row">
       <div class="col-md-2">
         Filter By:
       </div>
-      <div class="col-md-4">
-        <input type = "text"/>
+      <div>
+        <input type="text" />
       </div>
+      <button class="offset-lg-9" id = "upload" mat-raised-button color="primary" (click)="openDialog()">
+        Upload
+      </button>
     </div>
-    <a class = "route-link" [routerLink] = "['/welcome']">
+    <a class="route-link" [routerLink]="['/welcome']">
       <button mat-raised-button color="accent">
         Back
       </button>

@@ -8,6 +8,7 @@ import { ReceiptViewComponent } from './receipt/receipt-view/receipt-view.compon
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserModule,
     SharedModule,
     MaterialModule,
+    FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
