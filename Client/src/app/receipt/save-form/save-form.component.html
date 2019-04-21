@@ -3,19 +3,21 @@
   <form class="save-receipt-form">
     <mat-form-field class="example-full-width">
       <input [(ngModel)]="data.name" matInput placeholder="Receipt Name" id="receiptName">
+      <mat-error>Required</mat-error>
     </mat-form-field>
     <br>
+    <!---
     <mat-form-field class="example-full-width">
       <input type="file" accept="image/png, image/jpeg" id="content" />
     </mat-form-field>
+  -->
   </form>
-  <h3>{{data.date}}</h3>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-raised-button mat-dialog-close>
+  <button mat-raised-button (click) = "onClickCancel()">
     Cancel
   </button>
-  <button *ngIf="isNameEmpty && isContentEmpty" mat-raised-button mat-dialog-close>
+  <button mat-raised-button [disabled] = "!isEnabled"[mat-dialog-close] = "data.receiptName">
     Upload
   </button>
 </mat-dialog-actions>

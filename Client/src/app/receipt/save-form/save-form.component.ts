@@ -7,24 +7,18 @@ import {  ReceiptSave } from '../receiptSaveFormat';
   styleUrls: ['./save-form.component.css']
 })
 export class SaveFormComponent implements OnInit{
-  name: string;
   content: string;
   isNameEmpty: boolean = true;
   isContentEmpty: boolean = true;
   isVisible: boolean = false;
-
-  getName(): string {
-    return this.name;
-  }
-
-  setName(value: string): void {
-    this.name = value;
-  }
+  isEnabled: boolean = false;
 
   constructor(public dialogRef: MatDialogRef<SaveFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: ReceiptSave) { 
-    this.name = "";
-    this.content = "";
+      }
+
+  onClickCancel(): void {
+    this.dialogRef.close();
   }
 
   ngOnInit(): void {

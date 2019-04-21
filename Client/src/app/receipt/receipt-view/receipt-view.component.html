@@ -6,6 +6,7 @@
           table_chart
         </i>
         Your Receipts
+        {{this.receiptName}}
       </mat-card-title>
     </h1>
 
@@ -27,5 +28,8 @@
         Back
       </button>
     </a>
+    <h1 *ngIf = "receiptName">
+      {{receiptName}}
+    </h1>
   </mat-card>
 </div>
