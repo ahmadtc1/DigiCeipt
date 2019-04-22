@@ -1,23 +1,33 @@
 <h1 mat-dialog-title>Upload Receipt</h1>
 <mat-dialog-content>
   <form class="save-receipt-form">
-    <mat-form-field class="example-full-width">
-      <input [(ngModel)]="data.name" matInput placeholder="Receipt Name" id="receiptName" (keyup) = "saveIsEnabled()">
-      <mat-error>Required</mat-error>
-    </mat-form-field>
-    <br>
+    <p>
+      <mat-form-field class="example-full-width">
+        <input [(ngModel)]="name" matInput placeholder="Receipt Name" id="receiptName" (keyup)="saveIsEnabled()"
+          required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+    </p>
     <!---
     <mat-form-field class="example-full-width">
       <input type="file" accept="image/png, image/jpeg" id="content" />
     </mat-form-field>
-  -->
+    -->
+    <p>
+      <mat-form-field class="example-full-width">
+        <input [(ngModel)]="content" matInput placeholder="Receipt Content" id="receiptName" (keyup)="saveIsEnabled()"
+          required>
+        <mat-error>Required</mat-error>
+      </mat-form-field>
+    </p>
   </form>
+  <h1>{{name}}</h1>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-raised-button (click) = "onClickCancel()">
+  <button mat-raised-button (click)="onClickCancel()">
     Cancel
   </button>
-  <button mat-raised-button [disabled] = "!isEnabled"[mat-dialog-close] = "data.receiptName">
+  <button mat-raised-button [disabled]="!isEnabled" mat-dialog-close>
     Upload
   </button>
 </mat-dialog-actions>

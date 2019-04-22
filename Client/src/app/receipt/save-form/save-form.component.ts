@@ -7,7 +7,7 @@ import {  ReceiptSave } from '../receiptSaveFormat';
   styleUrls: ['./save-form.component.css']
 })
 export class SaveFormComponent implements OnInit{
-  name: string;
+  name: string ;
   content: string;
   isEnabled: boolean = false;
 
@@ -24,8 +24,9 @@ export class SaveFormComponent implements OnInit{
 
   saveIsEnabled(): void {
     let isNamePopulated = false;
-    if (this.name !== null) {
-      this.isEnabled = true;
-    }
+    let isContentPopulated = false;
+    isNamePopulated = (this.name.length > 0) ? true: false;
+    isContentPopulated = (this.content.length > 0) ? true: false;
+    this.isEnabled = isNamePopulated && isContentPopulated;
   }
 }
