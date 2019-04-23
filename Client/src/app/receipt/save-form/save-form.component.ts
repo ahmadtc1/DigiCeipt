@@ -7,8 +7,8 @@ import {  ReceiptSave } from '../receiptSaveFormat';
   styleUrls: ['./save-form.component.css']
 })
 export class SaveFormComponent implements OnInit{
-  name: string ;
-  content: string;
+  name: string ="";
+  content: string="";
   isEnabled: boolean = false;
 
   constructor(public dialogRef: MatDialogRef<SaveFormComponent>,
