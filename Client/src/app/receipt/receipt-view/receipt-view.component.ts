@@ -10,7 +10,13 @@ import { ReceiptSave } from '../receiptSaveFormat';
 export class ReceiptViewComponent implements OnInit {
   receiptName: string;
   receiptContent: any;
-  receipts: Receipt[];
+  receipts: Receipt[] = [
+    {
+      "receiptName": "receiptOne",
+      "receiptContent": "10.99",
+      "dateSaved": new Date()
+    }
+  ];
   filteredReceipts: Receipt[] = [];
   _listFilter: string;
 
