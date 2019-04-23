@@ -33,7 +33,8 @@
     </h1>
     <mat-grid-list *ngIf = "receipts" cols = "4" rowHeight="1:1">
       <mat-grid-tile *ngFor = "let receipt of receipts">
-        {{receipt.receiptName}}
+        <h1>{{receipt.receiptName}}</h1>
+        <h4>{{receipt.dateSaved}}</h4>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card>
