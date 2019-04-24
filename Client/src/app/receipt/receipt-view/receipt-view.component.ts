@@ -3,6 +3,7 @@ import { Receipt } from '../receipt'
 import { MatDialog } from '@angular/material';
 import { SaveFormComponent } from '../save-form/save-form.component';
 import { ReceiptSave } from '../receiptSaveFormat';
+import { ReceiptService } from '../receipt.service';
 @Component({
   templateUrl: './receipt-view.component.html',
   styleUrls: ['./receipt-view.component.css']
