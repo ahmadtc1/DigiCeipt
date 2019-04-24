@@ -12,6 +12,10 @@ export class ReceiptService {
   constructor(private http: HttpClient) { }
 
   getReceipts(): Receipt[] {
+
+  }
+
+  saveReceipt(): any {
     
   }
 
