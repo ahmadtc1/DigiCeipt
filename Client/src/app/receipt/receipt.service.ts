@@ -11,6 +11,10 @@ export class ReceiptService {
 
   constructor(private http: HttpClient) { }
 
+  getReceipts(): Receipt[] {
+    
+  }
+
   private handleError(err: HttpErrorResponse) {
     //in a real world app we may send the server to some remote logging infrastructure
     //Instead of just logging it to the console
