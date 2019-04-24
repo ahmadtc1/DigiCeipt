@@ -41,7 +41,8 @@ export class ReceiptViewComponent implements OnInit {
   filteredReceipts: Receipt[] = [];
   _listFilter: string;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              public receiptService: ReceiptService) { }
 
   openDialog() {
     const dialogRef = this.dialog.open(SaveFormComponent, {
@@ -55,7 +56,8 @@ export class ReceiptViewComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    
+      }
 
   /*
   get listFilter(): string {
