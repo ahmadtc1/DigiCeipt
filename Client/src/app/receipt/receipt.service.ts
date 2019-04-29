@@ -11,7 +11,7 @@ export class ReceiptService {
   receiptsGetUrl: string = "https://localhost:4000/api/receipts";
   constructor(private http: HttpClient) { }
 
-  getReceipts(): Receipt[] {
+  getReceipts(): Observable<Receipt[]> {
     return this.http.get<Receipt[]>(this.receiptsGetUrl).pipe(
       tap(data => console.log("All: " + JSON.stringify(data))),
       catchError(this.handleError)
