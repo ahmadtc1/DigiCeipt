@@ -1,0 +1,13 @@
+.receiptObjects {
+    padding: 20px;
+}
+
+.receiptGridObject {
+    padding: 20px;
+    color: white;
+    background-color:#4f92ff;
+}
+
+.receiptObjectHeader {
+    text-align: center;
+}
