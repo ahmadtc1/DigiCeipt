@@ -3,11 +3,16 @@
 }
 
 .receiptGridObject {
-    padding: 20px;
     color: white;
     background-color:#4f92ff;
+    padding-bottom:10px;
 }
 
 .receiptObjectHeader {
     text-align: center;
+}
+
+.backButton {
+    align-content: flex-end;
+    align-items: flex-end;
 }

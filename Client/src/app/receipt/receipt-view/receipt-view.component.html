@@ -7,6 +7,11 @@
         </i>
         Your Receipts
         {{this.receiptName}}
+        <a class="route-link" [routerLink]="['/welcome']">
+          <button mat-raised-button color="accent" id="backButton">
+            Back
+          </button>
+        </a>
       </mat-card-title>
     </h1>
 
@@ -23,21 +28,18 @@
         Upload
       </button>
     </div>
-    <a class="route-link" [routerLink]="['/welcome']">
-      <button mat-raised-button color="accent">
-        Back
-      </button>
-    </a>
+
     <h1 *ngIf="receiptName">
       {{receiptName}}
     </h1>
-    <mat-grid-list gutterSize="3px" class="receiptObjects" *ngIf="receipts" cols="4" rowHeight="1:1">
+    <mat-grid-list gutterSize="7px" class="receiptObjects" *ngIf="receipts" cols="4" rowHeight="1:1">
       <mat-grid-tile class="receiptGridObject" *ngFor="let receipt of receipts">
-        <mat-grid-tile-header class = "receiptObjectHeader">
+        <mat-grid-tile-header class="receiptObjectHeader">
           <h1>{{receipt.receiptName}}</h1>
         </mat-grid-tile-header>
         <h4>{{receipt.dateSaved}}</h4>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card>
+
 </div>
