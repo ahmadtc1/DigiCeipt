@@ -1,9 +1,9 @@
 # DigiCeipt
 
-#### Purpose
+### Purpose
 Long gone are the days of struggling to store and keep track of phyisical receipts. Digiceipt acts as a a digital receipt storage solution
 
-#### Technologies
+### Technologies
 The full-stack web application was developed using **Angular**, **NodeJS**, **MongoDB** and **Express**.
 
 A **REST API** was developed using Express and Mongoose, implementing different HTTP verbs for data manipulation and storage.
@@ -12,4 +12,4 @@ A **REST API** was developed using Express and Mongoose, implementing different 
 
 The uploaded receipt image text was converted to digital text using **OCR**, and then stored with **MongoDB**.
 
-#### Views
+### Views
