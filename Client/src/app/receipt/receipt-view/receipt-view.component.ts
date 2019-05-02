@@ -11,38 +11,12 @@ import { ReceiptService } from '../receipt.service';
 export class ReceiptViewComponent implements OnInit {
   receiptName: string;
   receiptContent: any;
-  receipts: Receipt[] = [
-    {
-      "receiptName": "receiptOne",
-      "receiptContent": "10.99",
-      "dateSaved": new Date()
-    },
-    {
-      "receiptName": "receiptTwo",
-      "receiptContent": "10.20",
-      "dateSaved": new Date()
-    },
-    {
-      "receiptName": "receiptThree",
-      "receiptContent": "12.7",
-      "dateSaved": new Date()
-    },
-    {
-      "receiptName": "receiptFour",
-      "receiptContent": "10.97",
-      "dateSaved": new Date()
-    },
-    {
-      "receiptName": "receiptFive",
-      "receiptContent": "5.55",
-      "dateSaved": new Date()
-    }
-  ];
+  receipts: Receipt[];
   filteredReceipts: Receipt[] = [];
   _listFilter: string;
 
   constructor(public dialog: MatDialog,
-              public receiptService: ReceiptService) { }
+    public receiptService: ReceiptService) { }
 
   openDialog() {
     const dialogRef = this.dialog.open(SaveFormComponent, {
@@ -56,8 +30,7 @@ export class ReceiptViewComponent implements OnInit {
   }
 
   ngOnInit() {
-    
-      }
+  }
 
   /*
   get listFilter(): string {
