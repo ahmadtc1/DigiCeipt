@@ -13,3 +13,5 @@ A **REST API** was developed using Express and Mongoose, implementing different 
 The uploaded receipt image text was converted to digital text using **OCR**, and then stored with **MongoDB**.
 
 ### Views
+#### Receipt View
+!(images/Digiceipt.png)[DigiCeipt])
