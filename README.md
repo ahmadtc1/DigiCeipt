@@ -14,4 +14,4 @@ The uploaded receipt image text was converted to digital text using **OCR**, and
 
 ### Views
 #### Receipt View
-!(images/Digiceipt.png)[DigiCeipt])
+![DigiCeipt](images/Digiceipt.png)
