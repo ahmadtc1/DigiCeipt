@@ -1,6 +1,6 @@
 <div style="text-align: center">
   <mat-card class = "title-bar">
-    <h1>
+    <h1 class = "title-text">
       <mat-card-title>
         <i class="material-icons md-48">
           table_chart
@@ -24,20 +24,17 @@
       <div>
         <input type="text" />
       </div>
-      <button class="offset-lg-9" id="upload" mat-raised-button color="primary" (click)="openDialog()">
+      <button id="uploadButton" class="offset-lg-9" id="upload" mat-raised-button color="primary" (click)="openDialog()">
         Upload
       </button>
     </div>
 
-    <h1 *ngIf="receiptName">
-      {{receiptName}}
-    </h1>
     <mat-grid-list gutterSize="7px" class="receiptObjects" *ngIf="receipts" cols="4" rowHeight="1:1">
       <mat-grid-tile class="receiptGridObject" *ngFor="let receipt of receipts">
         <mat-grid-tile-header class="receiptObjectHeader">
-          <h1>{{receipt.receiptName}}</h1>
+          <h1 id="receiptTitle">{{receipt.receiptName}}</h1>
         </mat-grid-tile-header>
-        <h4>{{receipt.dateSaved}}</h4>
+        <h4 id="receiptBody">{{receipt.dateSaved}}</h4>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card>

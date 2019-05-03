@@ -21,4 +21,9 @@
 
 .page-title, .page-text {
     color: white;
+    font-family: 'Muli', sans-serif;
+}
+
+.image-row {
+    background-color: #2AABE4;
 }

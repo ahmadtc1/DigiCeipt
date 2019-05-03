@@ -4,7 +4,7 @@
 
 .receiptGridObject {
     color: white;
-    background-color:#4f92ff;
+    background-color:#FFDC24;
     padding-bottom:10px;
 }
 
@@ -17,6 +17,22 @@
     align-items: flex-end;
 }
 
-.title-bar {
-    background-color: #ffe6ff;
+.title-bar, .receiptCard {
+    background-color: #2AABE4;
+    color: white;
+}
+
+
+h1 {
+    font-family: 'Muli', sans-serif;
+}
+
+#receiptTitle, #receiptBody {
+    color: black;
+}
+
+
+
+#uploadButton {
+
 }
