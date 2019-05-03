@@ -8,5 +8,17 @@
 }
 
 .background-image {
-    
+
+}
+
+.welcome-title {
+    background-color: #2AABE4;
+}
+
+#bg-image {
+    padding-top: 10px;
+}
+
+.page-title, .page-text {
+    color: white;
 }

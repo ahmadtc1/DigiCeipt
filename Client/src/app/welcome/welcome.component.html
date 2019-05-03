@@ -1,23 +1,24 @@
 <div style="text-align:center">
-  <mat-card>
+  <mat-card class = "welcome-title">
     <mat-card-title>
-      <h1>
+      <h1 class = "page-title">
         Welcome to {{ title }}!
       </h1>
     </mat-card-title>
     <mat-card-subtitle>
-      <p>
+      <p class = "page-text">
         Store all of your receipts digitally, have them available for access at your fingertips!
         <i class="material-icons">
           pan_tool
         </i>
       </p>
     </mat-card-subtitle>
-
   </mat-card>
 </div>
-<div class = "background-image">
-  <img src = "/Client/src/static/img/Cloud-bg.png" alt="digital cloud">
+<div class="text-center">
+  <img id = "bg-image" src="/Client/src/assets/images/Cloud-bg.png" class="img-responsive center-block"
+  alt="A digital cloud; representing DigiCeipt's cloud vision"
+    style="max-height:300px;padding-bottom:50px" />
 </div>
 <div class='uploadButton'>
   <a class='route-link' [routerLink]="['/receipts']">
