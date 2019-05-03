@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },

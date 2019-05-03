@@ -16,3 +16,7 @@
     align-content: flex-end;
     align-items: flex-end;
 }
+
+.title-bar {
+    background-color: #ffccff;
+}
