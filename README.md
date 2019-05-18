@@ -15,6 +15,11 @@ The uploaded receipt image text was converted to digital text using **OCR** thro
 ### Future Scope
 The app is still currently under construction, but it won't be long before DigiCeipt comes to life!
 
+I plan on adding more features to the application as the future approaches, including things like:
+* Receipts Grouping - Allow users to organize their receipts more effectively
+* Receipts Vault Storage - Add a passcode locked section where users can store high security receipts
+* Exporting - Users will be able to export all their receipts to an Excel Spreadsheet
+
 ### Views
 #### Receipt View
 ![DigiCeipt](images/Digiceipt.png)
