@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 
-const db = mongoose.connect('mongodb://localhost/bookAPI');
+const db = mongoose.connect('mongodb://localhost/receiptAPI');
 
 const Receipt = require('./models/receiptModel');
 
