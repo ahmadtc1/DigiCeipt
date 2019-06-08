@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 
 const db = mongoose.connect('mongodb://localhost/bookAPI');
 
-const Book = require('./models/bookModel');
+const Receipt = require('./models/receiptModel');
 
 //Assigning a port to the server
 const port = process.env.PORT || 4000;
@@ -16,9 +16,9 @@ const port = process.env.PORT || 4000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-bookRouter = require('./src/routes/bookRoutes')(Book);
+receiptRouter = require('./src/routes/receiptRoutes')(Receipt);
 
-app.use('/api', bookRouter);
+app.use('/api', receiptRouter);
 
 
 
