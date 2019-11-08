@@ -24,14 +24,16 @@
       <div>
         <input type="text" />
       </div>
-      <button id="uploadButton" class="offset-lg-9" id="upload" mat-raised-button color="accent" (click)="openDialog()">
-        Upload
-      </button>
+      <div class = "upload-button">
+        <button id="uploadButton" class="offset-lg-9" id="upload" mat-raised-button color="accent" (click)="openDialog()">
+          Upload
+        </button>
+      </div>
     </div>
 
     <mat-grid-list gutterSize="7px" class="receiptObjects" *ngIf="receipts" cols="4" rowHeight="1:1">
-      <mat-grid-tile class="receiptGridObject" *ngFor="let receipt of receipts">
-        <mat-grid-tile-header class="receiptObjectHeader">
+      <mat-grid-tile class="receiptGridObject receiptObject" *ngFor="let receipt of receipts">
+        <mat-grid-tile-header class="receiptObjectHeader receiptName">
           <h1 id="receiptTitle">{{receipt.receiptName}}</h1>
         </mat-grid-tile-header>
         <h4 id="receiptBody">{{receipt.dateSaved}}</h4>
